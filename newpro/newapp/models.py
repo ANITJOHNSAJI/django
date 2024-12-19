@@ -1,5 +1,6 @@
 from django.db import models
+from.models import *
 
 # Create your models here.
 class Todoitem(models.Model):
-    title1=models.CharField(max_length=100)
+    tite1=models.CharField(max_length=100)
