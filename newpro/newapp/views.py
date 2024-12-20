@@ -4,10 +4,11 @@ from.models import*
 # Create your views here.
 def index(request):
     if request.POST:
-        title=request.POST.get("data")
-        obj=Todoitem(title=todo123)
-        print(title)
+        todo1=request.POST.get("data")
+        todo2=request.POST.get("date")
+        obj=Todoitem(tite1=todo1,title2=todo2)
+        obj.save()
         return redirect("index")
     data=Todoitem.objects.all
-    return render(request,"index.html")
+    return render(request,"index.html",{"data":data})
 

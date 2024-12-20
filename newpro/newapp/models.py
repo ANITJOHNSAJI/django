@@ -4,3 +4,4 @@ from.models import *
 # Create your models here.
 class Todoitem(models.Model):
     tite1=models.CharField(max_length=100)
+    title2=models.CharField(max_length=100)
