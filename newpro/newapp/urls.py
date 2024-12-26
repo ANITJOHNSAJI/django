@@ -4,4 +4,5 @@ from.import views
 
 urlpatterns = [
    path('',views.index,name="index"), 
+   path('deletion/<int:id>', views.delete_g,name='deletion'),
 ]

@@ -5,7 +5,8 @@ from django.conf.urls.static import static
 from.import views
 
 urlpatterns = [
-    path('',views.index,name='index')
+    path('',views.index,name='index'),
+    path('deletion/<int:id>', views.delete_g,name='deletion'),
     
    
 ]

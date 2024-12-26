@@ -11,3 +11,7 @@ def index(request):
           
     gallery_images=Gallery.objects.all()
     return render(request,"index.html", {"gallery_images":gallery_images})
+def delete_g(request,id):
+      feeds=Gallery.objects.filter(pk=id)
+      feeds.delete()
+      return redirect(index)

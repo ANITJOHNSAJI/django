@@ -12,3 +12,7 @@ def index(request):
     data=Todoitem.objects.all
     return render(request,"index.html",{"data":data})
 
+def delete_g(request,id):
+      feeds=Todoitem.objects.filter(pk=id)
+      feeds.delete()
+      return redirect(index)
